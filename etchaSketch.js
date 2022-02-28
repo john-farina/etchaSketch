@@ -18,18 +18,21 @@ function createRow(boxNum) {
     for (i = 1; i <= boxNum; i++) {
         const contentOne = document.createElement('div');
         contentOne.classList.add('grid');
-        contentOne.style.borderStyle = 'solid';
+        contentOne.style.borderStyle = 'dotted';
         contentOne.style.width = '20px';
         contentOne.style.height = '20px';
         rowContainer.appendChild(contentOne);
     }
 }
-
-let c = 1;
-while (c <= 16) {
-    c++;
-    createRow(16);
+function createGrid(rowNum, columnNum) {
+    let c = 1;
+    while (c <= columnNum) {
+        c++;
+        createRow(rowNum);
+    }
 }
+
+createGrid(16, 16);
 
 let divs = document.querySelectorAll('.grid');
 const changeBackgroundColor = (e) => {
