@@ -2,3 +2,10 @@ body {
     display: flex;
     justify-content: center;
 }
+
+.clicked {
+    background-color: black;
+}
+
+.grid {
+}
