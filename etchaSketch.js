@@ -1,6 +1,6 @@
 const container = document.querySelector('#main-content');
 const rowContainer = document.createElement('div');
-let userChoice = 60;
+let userChoice = 16;
 
 rowContainer.classList.add('rowCont');
 rowContainer.style.display = 'flex';
@@ -55,12 +55,6 @@ function createGrid(rowNum, columnNum) {
     }
 }
 
-const changeGridSize = document.querySelector('.change-size');
-changeGridSize.addEventListener('click', () => {
-    let userChoice = prompt('Choose a # 1-70');
-    console.log(userChoice);
-});
-
 createGrid(userChoice, userChoice);
 
 //FINDS ALL DIVS WITH GRID CLASS
@@ -69,8 +63,26 @@ const divs = document.querySelectorAll('.grid');
 const changeBackgroundColor = (e) => {
     e.target.style.backgroundColor = 'black';
 };
+
+const eraseBackgroundColor = (e) => {
+    e.target.style.backgroundColor = 'white';
+};
 //EACH DIV ADDS AN EVENT LISTEN FOR THE MOUSE ENTERING,THEN CHANGE
 //BACKGROUND
 divs.forEach((div) => {
     div.addEventListener('mouseenter', changeBackgroundColor);
+});
+
+divs.forEach((div) => {
+    div.addEventListener('click', eraseBackgroundColor);
+});
+
+const changeGridSize = document.querySelector('.change-size');
+
+changeGridSize.addEventListener('click', () => {
+    userChoice = prompt('Choose a # 1-70');
+    container.parentNode.removeChild(container);
+    container.style.display = 'flex';
+    container.style.flexDirection = 'column';
+    console.log(userChoice);
 });
