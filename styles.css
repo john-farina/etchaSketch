@@ -1,11 +1,51 @@
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-}
-
-.clicked {
-    background-color: black;
+    background-color: rgb(198, 33, 33);
 }
 
 .grid {
+}
+
+button {
+    font-family: 'Cabin Sketch', cursive;
+    background-color: rgb(253, 251, 246);
+    border-radius: 100px;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    font-size: 10px;
+    font-weight: bolder;
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgb(215, 213, 209);
+}
+
+h1 {
+    font-family: 'Cabin Sketch', cursive;
+    font-size: 3rem;
+    color: rgb(255, 254, 247);
+    margin-bottom: 5px;
+    margin-top: 0px;
+}
+
+#etcha-sketch {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-content {
+    background-color: black;
+    padding: 4px;
+}
+
+#btn-container {
+    margin-top: 10px;
+    display: flex;
+    gap: 12rem;
+    padding: 10px;
 }
