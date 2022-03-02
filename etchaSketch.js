@@ -36,33 +36,22 @@ function createRow(boxNum) {
     // gridContainer.appendChild(rowContainer);
     //LOOP TO ITEMNUMBER, CREATES A BOX
     for (i = 1; i <= boxNum; i++) {
-        const contentOne = document.createElement('div');
-        contentOne.classList.add('grid');
-        contentOne.style.borderStyle = 'solid';
-        contentOne.style.borderWidth = '.06rem';
-        contentOne.style.backgroundColor = 'white';
-        //VARIABLE TO RESET BACKGROUND COLOR
-        const resetBackgroundColor = (e) => {
-            e.target.style.backgroundColor = 'white';
-        };
-        //FINDS RESET BUTTON
-        const reset = document.querySelector('.reset');
-        //LISTENS FOR CLICK ON BUTTON THEN CHANGES IT TO WHITE
-        reset.addEventListener('click', () => {
-            contentOne.style.backgroundColor = 'white';
-        });
-
+        const square = document.createElement('div');
+        square.classList.add('grid');
+        square.style.borderStyle = 'solid';
+        square.style.borderWidth = '.06rem';
+        square.style.backgroundColor = 'white';
         if (boxNum <= 23) {
-            contentOne.style.width = '20px';
-            contentOne.style.height = '20px';
+            square.style.width = '20px';
+            square.style.height = '20px';
         } else if (boxNum > 23 && boxNum <= 40) {
-            contentOne.style.width = '10px';
-            contentOne.style.height = '10px';
+            square.style.width = '10px';
+            square.style.height = '10px';
         } else if (boxNum > 40 && boxNum <= 70) {
-            contentOne.style.width = '6px';
-            contentOne.style.height = '6px';
+            square.style.width = '6px';
+            square.style.height = '6px';
         }
-        rowContainer.appendChild(contentOne);
+        rowContainer.appendChild(square);
     }
     addPaintListen();
     return rowContainer;
@@ -99,23 +88,3 @@ changeGridSize.addEventListener('click', () => {
     userPrompt();
     container.appendChild(gridContainer);
 });
-
-// //FINDS ALL DIVS WITH GRID CLASS
-// const divs = document.querySelectorAll('.grid');
-// //CHANGE BACKGROUND EVENT VARIABLE
-// const changeBackgroundColor = (e) => {
-//     e.target.style.backgroundColor = 'black';
-// };
-// const eraseBackgroundColor = (e) => {
-//     e.target.style.backgroundColor = 'white';
-// };
-// //EACH DIV ADDS AN EVENT LISTEN FOR THE MOUSE ENTERING,THEN CHANGE
-// //BACKGROUND
-// divs.forEach((div) => {
-//     div.addEventListener('mouseenter', changeBackgroundColor);
-// });
-// //EACH DIV ADDS AN EVENT LISTEN FOR THE MOUSE CLICK,THEN CHANGE
-// //BACKGROUND
-// divs.forEach((div) => {
-//     div.addEventListener('click', eraseBackgroundColor);
-// });
