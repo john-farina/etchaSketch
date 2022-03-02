@@ -60,27 +60,6 @@ function createGrid(rowNum, columnNum) {
 
 createGrid(userChoice, userChoice);
 
-//FINDS ALL DIVS WITH GRID CLASS
-const divs = document.querySelectorAll('.grid');
-
-//CHANGE BACKGROUND EVENT VARIABLE
-const changeBackgroundColor = (e) => {
-    e.target.style.backgroundColor = 'black';
-};
-const eraseBackgroundColor = (e) => {
-    e.target.style.backgroundColor = 'white';
-};
-//EACH DIV ADDS AN EVENT LISTEN FOR THE MOUSE ENTERING,THEN CHANGE
-//BACKGROUND
-divs.forEach((div) => {
-    div.addEventListener('mouseenter', changeBackgroundColor);
-});
-//EACH DIV ADDS AN EVENT LISTEN FOR THE MOUSE CLICK,THEN CHANGE
-//BACKGROUND
-divs.forEach((div) => {
-    div.addEventListener('click', eraseBackgroundColor);
-});
-
 function removeGrid() {
     container.removeChild(gridContainer);
 }
@@ -97,4 +76,24 @@ changeGridSize.addEventListener('click', () => {
     removeGrid();
     userPrompt();
     container.appendChild(gridContainer);
+});
+
+//FINDS ALL DIVS WITH GRID CLASS
+const divs = document.querySelectorAll('.grid');
+//CHANGE BACKGROUND EVENT VARIABLE
+const changeBackgroundColor = (e) => {
+    e.target.style.backgroundColor = 'black';
+};
+const eraseBackgroundColor = (e) => {
+    e.target.style.backgroundColor = 'white';
+};
+//EACH DIV ADDS AN EVENT LISTEN FOR THE MOUSE ENTERING,THEN CHANGE
+//BACKGROUND
+divs.forEach((div) => {
+    div.addEventListener('mouseenter', changeBackgroundColor);
+});
+//EACH DIV ADDS AN EVENT LISTEN FOR THE MOUSE CLICK,THEN CHANGE
+//BACKGROUND
+divs.forEach((div) => {
+    div.addEventListener('click', eraseBackgroundColor);
 });
