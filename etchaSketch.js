@@ -1,18 +1,17 @@
 const container = document.querySelector('#main-content');
+const gridContainer = document.createElement('div');
+gridContainer.classList.add('grid__container');
 const rowContainer = document.createElement('div');
+rowContainer.classList.add('row__container');
+container.appendChild(gridContainer);
 let userChoice = 16;
-
-rowContainer.classList.add('rowCont');
-rowContainer.style.display = 'flex';
-rowContainer.style.gap = '2px';
-container.appendChild(rowContainer);
 
 function createRow(boxNum) {
     //CREATES A DIV TO PUT THE BOXES IN
     const rowContainer = document.createElement('div');
-    rowContainer.classList.add('rowContainer');
+    rowContainer.classList.add('row__container');
     rowContainer.style.display = 'flex';
-    container.appendChild(rowContainer);
+    gridContainer.appendChild(rowContainer);
     //LOOP TO ITEMNUMBER, CREATES A BOX
     for (i = 1; i <= boxNum; i++) {
         const contentOne = document.createElement('div');
@@ -59,11 +58,11 @@ createGrid(userChoice, userChoice);
 
 //FINDS ALL DIVS WITH GRID CLASS
 const divs = document.querySelectorAll('.grid');
+
 //CHANGE BACKGROUND EVENT VARIABLE
 const changeBackgroundColor = (e) => {
     e.target.style.backgroundColor = 'black';
 };
-
 const eraseBackgroundColor = (e) => {
     e.target.style.backgroundColor = 'white';
 };
@@ -72,17 +71,26 @@ const eraseBackgroundColor = (e) => {
 divs.forEach((div) => {
     div.addEventListener('mouseenter', changeBackgroundColor);
 });
-
+//EACH DIV ADDS AN EVENT LISTEN FOR THE MOUSE CLICK,THEN CHANGE
+//BACKGROUND
 divs.forEach((div) => {
     div.addEventListener('click', eraseBackgroundColor);
 });
 
-const changeGridSize = document.querySelector('.change-size');
+function removeGrid() {
+    container.removeChild(gridContainer);
+}
 
+function userPrompt() {
+    let gridContainer = document.createElement('div');
+    gridContainer.classList.add('grid__container');
+    let userChoice = prompt('1-70');
+    createGrid(userChoice, userChoice);
+}
+
+const changeGridSize = document.querySelector('.change-size');
 changeGridSize.addEventListener('click', () => {
-    userChoice = prompt('Choose a # 1-70');
-    container.parentNode.removeChild(container);
-    container.style.display = 'flex';
-    container.style.flexDirection = 'column';
-    console.log(userChoice);
+    removeGrid();
+    userPrompt();
+    container.appendChild(gridContainer);
 });
