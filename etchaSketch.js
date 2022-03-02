@@ -1,6 +1,6 @@
 const container = document.querySelector('#main-content');
-const gridContainer = document.createElement('div');
-gridContainer.classList.add('grid__container');
+let gridContainer;
+// gridContainer.classList.add('grid__container');
 // const rowContainer = document.createElement('div');
 // rowContainer.classList.add('row__container');
 // container.appendChild(gridContainer);
@@ -43,7 +43,7 @@ function createRow(boxNum) {
         }
         rowContainer.appendChild(contentOne);
     }
-    gridContainer.appendChild(rowContainer);
+    return rowContainer;
 }
 
 function createGrid(rowNum, columnNum) {
@@ -53,7 +53,8 @@ function createGrid(rowNum, columnNum) {
     let c = 1;
     while (c <= columnNum) {
         c++;
-        createRow(rowNum);
+        let rowContainer = createRow(rowNum);
+        gridContainer.appendChild(rowContainer);
     }
 }
 
@@ -85,7 +86,7 @@ function removeGrid() {
 }
 
 function userPrompt() {
-    let gridContainer = document.createElement('div');
+    gridContainer = document.createElement('div');
     gridContainer.classList.add('grid__container');
     let userChoice = prompt('1-70');
     createGrid(userChoice, userChoice);
