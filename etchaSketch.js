@@ -28,6 +28,19 @@ function addPaintListen() {
     });
 }
 
+function resetBtn() {
+    const resetBackgroundColor = (e) => {
+        e.target.style.backgroundColor = 'white';
+    };
+    //FINDS RESET BUTTON
+    const reset = document.querySelector('.reset');
+    //LISTENS FOR CLICK ON BUTTON THEN CHANGES IT TO WHITE
+    reset.addEventListener('click', () => {
+        alert('hi');
+        square.style.backgroundColor = 'white';
+    });
+}
+
 function createRow(boxNum) {
     //CREATES A DIV TO PUT THE BOXES IN
     const rowContainer = document.createElement('div');
@@ -41,6 +54,7 @@ function createRow(boxNum) {
         square.style.borderStyle = 'solid';
         square.style.borderWidth = '.06rem';
         square.style.backgroundColor = 'white';
+        // resetBtn();
         if (boxNum <= 23) {
             square.style.width = '20px';
             square.style.height = '20px';
