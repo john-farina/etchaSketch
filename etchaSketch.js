@@ -47,7 +47,7 @@ function createRow(boxNum) {
 }
 
 function createGrid(rowNum, columnNum) {
-    const gridContainer = document.createElement('div');
+    gridContainer = document.createElement('div');
     gridContainer.classList.add('grid__container');
     container.appendChild(gridContainer);
     let c = 1;
