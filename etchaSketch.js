@@ -1,9 +1,9 @@
 const container = document.querySelector('#main-content');
 const gridContainer = document.createElement('div');
 gridContainer.classList.add('grid__container');
-const rowContainer = document.createElement('div');
-rowContainer.classList.add('row__container');
-container.appendChild(gridContainer);
+// const rowContainer = document.createElement('div');
+// rowContainer.classList.add('row__container');
+// container.appendChild(gridContainer);
 let userChoice = 16;
 
 function createRow(boxNum) {
@@ -11,7 +11,7 @@ function createRow(boxNum) {
     const rowContainer = document.createElement('div');
     rowContainer.classList.add('row__container');
     rowContainer.style.display = 'flex';
-    gridContainer.appendChild(rowContainer);
+    // gridContainer.appendChild(rowContainer);
     //LOOP TO ITEMNUMBER, CREATES A BOX
     for (i = 1; i <= boxNum; i++) {
         const contentOne = document.createElement('div');
@@ -41,12 +41,15 @@ function createRow(boxNum) {
             contentOne.style.width = '6px';
             contentOne.style.height = '6px';
         }
-
         rowContainer.appendChild(contentOne);
     }
+    gridContainer.appendChild(rowContainer);
 }
 
 function createGrid(rowNum, columnNum) {
+    const gridContainer = document.createElement('div');
+    gridContainer.classList.add('grid__container');
+    container.appendChild(gridContainer);
     let c = 1;
     while (c <= columnNum) {
         c++;
