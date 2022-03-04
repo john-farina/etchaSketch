@@ -1,5 +1,6 @@
 const container = document.querySelector('#main-content');
 let gridContainer;
+let rowContainer;
 // gridContainer.classList.add('grid__container');
 // const rowContainer = document.createElement('div');
 // rowContainer.classList.add('row__container');
@@ -32,13 +33,13 @@ function resetBtn() {
     const resetBackgroundColor = (e) => {
         e.target.style.backgroundColor = 'white';
     };
-    //FINDS RESET BUTTON
-    const reset = document.querySelector('.reset');
-    //LISTENS FOR CLICK ON BUTTON THEN CHANGES IT TO WHITE
-    reset.addEventListener('click', () => {
-        alert('hi');
-        square.style.backgroundColor = 'white';
-    });
+    // //FINDS RESET BUTTON
+    // const reset = document.querySelector('.reset');
+    // //LISTENS FOR CLICK ON BUTTON THEN CHANGES IT TO WHITE
+    // reset.addEventListener('click', () => {
+    //     alert('hi');
+    //     square.style.backgroundColor = 'white';
+    // });
 }
 
 function createRow(boxNum) {
@@ -49,26 +50,29 @@ function createRow(boxNum) {
     // gridContainer.appendChild(rowContainer);
     //LOOP TO ITEMNUMBER, CREATES A BOX
     for (i = 1; i <= boxNum; i++) {
-        const square = document.createElement('div');
-        square.classList.add('grid');
-        square.style.borderStyle = 'solid';
-        square.style.borderWidth = '.06rem';
-        square.style.backgroundColor = 'white';
-        // resetBtn();
-        if (boxNum <= 23) {
-            square.style.width = '20px';
-            square.style.height = '20px';
-        } else if (boxNum > 23 && boxNum <= 40) {
-            square.style.width = '10px';
-            square.style.height = '10px';
-        } else if (boxNum > 40 && boxNum <= 70) {
-            square.style.width = '6px';
-            square.style.height = '6px';
-        }
+        let square = createSquare(boxNum);
         rowContainer.appendChild(square);
     }
     addPaintListen();
     return rowContainer;
+}
+
+function createSquare(boxNum) {
+    let square = document.createElement('div');
+    square.classList.add('grid');
+    square.style.borderStyle = 'solid';
+    square.style.borderWidth = '.06rem';
+    square.style.backgroundColor = 'white';
+    if (boxNum <= 23) {
+        square.style.width = '20px';
+        square.style.height = '20px';
+    } else if (boxNum > 23 && boxNum <= 40) {
+        square.style.width = '10px';
+        square.style.height = '10px';
+    } else if (boxNum > 40 && boxNum <= 70) {
+        square.style.width = '6px';
+        square.style.height = '6px';
+    }
 }
 
 function createGrid(rowNum, columnNum) {
