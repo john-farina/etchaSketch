@@ -8,8 +8,7 @@ let boxNum = 16;
 // container.appendChild(gridContainer);
 let userChoice = 16;
 
-function addPaintListen() {
-    //FINDS ALL DIVS WITH GRID CLASS
+function addPaintListen(square) {
     const divs = document.querySelectorAll('.grid');
     //CHANGE BACKGROUND EVENT VARIABLE
     const changeBackgroundColor = (e) => {
@@ -18,16 +17,9 @@ function addPaintListen() {
     const eraseBackgroundColor = (e) => {
         e.target.style.backgroundColor = 'white';
     };
-    //EACH DIV ADDS AN EVENT LISTEN FOR THE MOUSE ENTERING,THEN CHANGE
-    //BACKGROUND
-    divs.forEach((div) => {
-        div.addEventListener('mouseenter', changeBackgroundColor);
-    });
-    //EACH DIV ADDS AN EVENT LISTEN FOR THE MOUSE CLICK,THEN CHANGE
-    //BACKGROUND
-    divs.forEach((div) => {
-        div.addEventListener('click', eraseBackgroundColor);
-    });
+
+    square.addEventListener('mouseenter', changeBackgroundColor);
+    square.addEventListener('click', eraseBackgroundColor);
 }
 
 function createRow(boxNum) {
@@ -57,6 +49,8 @@ function createSquare(boxNum) {
     square.style.borderStyle = 'solid';
     square.style.borderWidth = '.06rem';
     square.style.backgroundColor = 'white';
+    square.style.width = '20px';
+    square.style.height = '20px';
     if (boxNum <= 23) {
         square.style.width = '20px';
         square.style.height = '20px';
