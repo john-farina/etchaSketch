@@ -28,6 +28,8 @@ h1 {
     color: rgb(255, 254, 247);
     margin-bottom: 5px;
     margin-top: -20px;
+    animation-name: red-flash;
+    animation-duration: 4s;
 }
 
 #etcha-sketch {
@@ -48,4 +50,31 @@ h1 {
     display: flex;
     gap: 12rem;
     padding: 10px;
+}
+
+.reset {
+}
+
+@keyframes red-flash {
+    0% {
+        color: rgb(253, 251, 246);
+    }
+    10% {
+        color: rgb(174, 40, 40);
+    }
+    15% {
+        color: rgb(253, 251, 246);
+    }
+    50% {
+        color: rgb(253, 251, 246);
+    }
+    55% {
+        color: rgb(174, 40, 40);
+    }
+    70% {
+        color: rgb(253, 251, 246);
+    }
+    100% {
+        color: rgb(253, 251, 246);
+    }
 }
