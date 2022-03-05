@@ -1,3 +1,17 @@
+@font-face {
+    font-family: 'Fortrack Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Fortrack Regular'), url('Fortrack-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'rondo';
+    font-style: normal;
+    font-weight: normal;
+    src: local('rondo'), url('/rondo.ttf') format('truetype');
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -9,14 +23,25 @@ body {
 .grid {
 }
 
+img {
+    display: block;
+    height: 30px;
+    width: 30px;
+}
+
+.img_one {
+    margin-left: 0.98rem;
+    margin-bottom: 0.1rem;
+}
+
 button {
-    font-family: 'optirondo-bold-bold', sans-serif;
+    font-family: 'Rondo', 'Times New Roman', Times, serif;
     background-color: rgb(253, 251, 246);
     border-radius: 100px;
     width: 60px;
     height: 60px;
     text-align: center;
-    font-size: 10px;
+    font-size: 11px;
     font-weight: bolder;
     border-style: solid;
     border-width: 5px;
@@ -24,15 +49,30 @@ button {
 }
 
 h1 {
-    font-family: 'optirondo-bold-bold', sans-serif;
-    color: rgb(255, 254, 247);
-    margin-bottom: 5px;
-    margin-top: -20px;
-    height: 70px;
-    animation-name: red-flash;
-    animation-duration: 0.8s;
-    animation-delay: 0.6s;
     font-size: 3rem;
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Rondo', 'Times New Roman', Times, serif;
+    color: rgb(214, 162, 48);
+    letter-spacing: 2px;
+    gap: 0.6rem;
+    margin-top: -2.5rem;
+    margin-bottom: -1.3rem;
+}
+
+.letter_a {
+    margin-left: 3px;
+    margin-right: -1px;
+}
+
+.subhead {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
 }
 
 #etcha-sketch {
@@ -53,8 +93,14 @@ h1 {
 #btn-container {
     margin-top: 10px;
     display: flex;
-    gap: 12rem;
+    flex-direction: row;
+    gap: 25rem;
     padding: 10px;
+}
+
+.button__one {
+    display: flex;
+    flex-direction: row;
 }
 
 #footer {
@@ -62,14 +108,19 @@ h1 {
     justify-content: center;
     align-items: center;
     background-color: rgb(170, 10, 10);
+    font-family: 'Rondo', 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    font-size: larger;
+    color: rgb(141, 23, 23);
     margin: 0;
     height: 5rem;
 }
 
 .footer__text {
+    font-family: 'Fortrack Regular';
     color: rgb(134, 22, 22);
-    font-weight: 450;
-    font-size: 1.3rem;
+    font-weight: 600;
+    font-size: 1.6rem;
 }
 .reset {
 }
@@ -137,5 +188,31 @@ h1 {
     }
     100% {
         transform: rotate(-359deg);
+    }
+}
+
+@media screen and (max-width: 520px) {
+    #btn-container {
+        gap: 13rem;
+        margin-top: 20px;
+    }
+
+    #header {
+        flex-direction: column;
+        gap: 0px;
+        margin-top: 40px;
+        margin-bottom: 0px;
+    }
+    .subhead {
+        margin-top: -36px;
+    }
+    #magic {
+        margin-bottom: -36px;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    #etcha-sketch {
+        margin-bottom: 13.7rem;
     }
 }
