@@ -30,7 +30,6 @@ function createRow(boxNum) {
     // gridContainer.appendChild(rowContainer);
     //LOOP TO ITEMNUMBER, CREATES A BOX
     for (i = 1; i <= boxNum; i++) {
-        // //FINDS RESET BUTTON
         const reset = document.querySelector('.reset');
         //LISTENS FOR CLICK ON BUTTON THEN CHANGES IT TO WHITE
         reset.addEventListener('click', () => {
@@ -49,8 +48,6 @@ function createSquare(boxNum) {
     square.style.borderStyle = 'solid';
     square.style.borderWidth = '.06rem';
     square.style.backgroundColor = 'white';
-    square.style.width = '20px';
-    square.style.height = '20px';
     if (boxNum <= 23) {
         square.style.width = '20px';
         square.style.height = '20px';
