@@ -1,12 +1,11 @@
 const container = document.querySelector('#main-content');
 let gridContainer;
 let rowContainer;
-let boxNum = 16;
+let boxNum = 18;
 // gridContainer.classList.add('grid__container');
 // const rowContainer = document.createElement('div');
 // rowContainer.classList.add('row__container');
 // container.appendChild(gridContainer);
-let userChoice = 16;
 
 function addPaintListen(square) {
     const divs = document.querySelectorAll('.grid');
@@ -75,7 +74,7 @@ function createGrid(rowNum, columnNum) {
     }
 }
 
-createGrid(userChoice, userChoice);
+createGrid(boxNum, boxNum);
 
 function removeGrid() {
     container.removeChild(gridContainer);
@@ -84,7 +83,7 @@ function removeGrid() {
 function userPrompt() {
     gridContainer = document.createElement('div');
     gridContainer.classList.add('grid__container');
-    let boxNum = prompt('1-70');
+    boxNum = prompt('1-70');
     createGrid(boxNum, boxNum);
     return boxNum;
 }
