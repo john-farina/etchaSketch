@@ -14,7 +14,9 @@ function addPaintListen(square) {
     };
 
     square.addEventListener('mouseenter', changeBackgroundColor);
+    square.addEventListener('ontouch', changeBackgroundColor);
     square.addEventListener('ontouchmove', changeBackgroundColor);
+    square.addEventListener('ontouchend', changeBackgroundColor);
 }
 
 function removeTransition(e) {
