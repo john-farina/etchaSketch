@@ -1,11 +1,7 @@
 const container = document.querySelector('#main-content');
 let gridContainer;
 let rowContainer;
-let boxNum = 18;
-// gridContainer.classList.add('grid__container');
-// const rowContainer = document.createElement('div');
-// rowContainer.classList.add('row__container');
-// container.appendChild(gridContainer);
+let boxNum = 16;
 
 function addPaintListen(square) {
     const divs = document.querySelectorAll('.grid');
@@ -21,18 +17,17 @@ function addPaintListen(square) {
     square.addEventListener('click', eraseBackgroundColor);
 }
 
+function removeTransition(e) {
+    if (e.propertyName !== 'transform') return;
+    container.classList.remove('shake');
+}
+
 function createRow(boxNum) {
     //CREATES A DIV TO PUT THE BOXES IN
     const rowContainer = document.createElement('div');
     rowContainer.classList.add('row__container');
     rowContainer.style.display = 'flex';
-    //LOOP TO ITEMNUMBER, CREATES A BOX
     for (i = 1; i <= boxNum; i++) {
-        const reset = document.querySelector('.reset');
-        //LISTENS FOR CLICK ON BUTTON THEN CHANGES IT TO WHITE
-        reset.addEventListener('click', () => {
-            square.style.backgroundColor = 'white';
-        });
         let square = createSquare();
         addPaintListen(square);
         rowContainer.appendChild(square);
@@ -46,6 +41,14 @@ function createSquare() {
     square.style.borderStyle = 'solid';
     square.style.borderWidth = '.06rem';
     square.style.backgroundColor = 'white';
+    //LISTENS FOR CLICK ON BUTTON THEN CHANGES IT TO WHITE
+
+    const reset = document.querySelector('.reset');
+    reset.addEventListener('click', () => {
+        square.style.backgroundColor = 'white';
+        container.classList.add('shake');
+    });
+
     if (boxNum <= 23) {
         square.style.width = '20px';
         square.style.height = '20px';
@@ -83,7 +86,13 @@ function removeGrid() {
 function userPrompt() {
     gridContainer = document.createElement('div');
     gridContainer.classList.add('grid__container');
-    boxNum = prompt('1-70');
+    boxNum = prompt('Type in a number 1-70!');
+    if (boxNum >= 71) {
+        boxNum = 70;
+    }
+    if (boxNum <= 0) {
+        boxNum = 16;
+    }
     createGrid(boxNum, boxNum);
     return boxNum;
 }
