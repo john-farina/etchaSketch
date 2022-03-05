@@ -79,6 +79,16 @@ h1 {
     animation-duration: 0.8s;
 }
 
+.rotate_clockwise {
+    animation-name: rotateClockwise;
+    animation-duration: 1s;
+}
+
+.rotate_counter {
+    animation-name: rotateCounter;
+    animation-duration: 1s;
+}
+
 @keyframes red-flash {
     0% {
         font-size: 0rem;
@@ -93,18 +103,39 @@ h1 {
 
 @keyframes SHAKE {
     0% {
-        margin-left: 50%;
+        margin-left: 0%;
+    }
+    10% {
+        margin-left: 40%;
     }
     30% {
-        margin-left: -50%;
+        margin-left: -40%;
     }
     60% {
-        margin-left: 30%;
+        margin-left: 20%;
     }
     80% {
-        margin-left: -20%;
+        margin-left: -15%;
     }
     100% {
         margin-left: 0%;
+    }
+}
+
+@keyframes rotateClockwise {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(359deg);
+    }
+}
+
+@keyframes rotateCounter {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-359deg);
     }
 }

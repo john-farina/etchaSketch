@@ -18,8 +18,7 @@ function addPaintListen(square) {
 }
 
 function removeTransition(e) {
-    if (e.propertyName !== 'transform') return;
-    container.classList.remove('shake');
+    e.classList.remove('shake');
 }
 
 function createRow(boxNum) {
@@ -47,8 +46,12 @@ function createSquare() {
     reset.addEventListener('click', () => {
         square.style.backgroundColor = 'white';
         container.classList.add('shake');
+        reset.classList.add('rotate_clockwise');
+        setTimeout(function () {
+            container.classList.remove('shake');
+            reset.classList.remove('rotate_clockwise');
+        }, 1000);
     });
-
     if (boxNum <= 23) {
         square.style.width = '20px';
         square.style.height = '20px';
@@ -101,5 +104,9 @@ const changeGridSize = document.querySelector('.change-size');
 changeGridSize.addEventListener('click', () => {
     removeGrid();
     userPrompt();
+    changeGridSize.classList.add('rotate_counter');
+    setTimeout(function () {
+        changeGridSize.classList.remove('rotate_counter');
+    }, 1000);
     container.appendChild(gridContainer);
 });
