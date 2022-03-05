@@ -57,8 +57,6 @@ function createSquare(boxNum) {
     square.style.borderStyle = 'solid';
     square.style.borderWidth = '.06rem';
     square.style.backgroundColor = 'white';
-    square.style.width = '20px';
-    square.style.height = '20px';
     if (boxNum <= 23) {
         square.style.width = '20px';
         square.style.height = '20px';
