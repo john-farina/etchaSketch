@@ -10,7 +10,7 @@ body {
 }
 
 button {
-    font-family: 'Cabin Sketch', cursive;
+    font-family: 'optirondo-bold-bold', sans-serif;
     background-color: rgb(253, 251, 246);
     border-radius: 100px;
     width: 60px;
@@ -24,7 +24,7 @@ button {
 }
 
 h1 {
-    font-family: 'Cabin Sketch', cursive;
+    font-family: 'optirondo-bold-bold', sans-serif;
     color: rgb(255, 254, 247);
     margin-bottom: 5px;
     margin-top: -20px;
@@ -67,9 +67,10 @@ h1 {
 }
 
 .footer__text {
-    color: rgb(98, 15, 15);
+    color: rgb(134, 22, 22);
+    font-weight: 450;
+    font-size: 1.3rem;
 }
-
 .reset {
 }
 
