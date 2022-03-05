@@ -1,6 +1,7 @@
 const container = document.querySelector('#main-content');
 let gridContainer;
 let rowContainer;
+let boxNum = 16;
 // gridContainer.classList.add('grid__container');
 // const rowContainer = document.createElement('div');
 // rowContainer.classList.add('row__container');
@@ -43,24 +44,10 @@ function createRow(boxNum) {
         reset.addEventListener('click', () => {
             square.style.backgroundColor = 'white';
         });
-        let square = document.createElement('div');
-        square.classList.add('grid');
-        square.style.borderStyle = 'solid';
-        square.style.borderWidth = '.06rem';
-        square.style.backgroundColor = 'white';
-        if (boxNum <= 23) {
-            square.style.width = '20px';
-            square.style.height = '20px';
-        } else if (boxNum > 23 && boxNum <= 40) {
-            square.style.width = '10px';
-            square.style.height = '10px';
-        } else if (boxNum > 40 && boxNum <= 70) {
-            square.style.width = '6px';
-            square.style.height = '6px';
-        }
+        let square = createSquare();
+        addPaintListen(square);
         rowContainer.appendChild(square);
     }
-    addPaintListen();
     return rowContainer;
 }
 
@@ -70,6 +57,8 @@ function createSquare(boxNum) {
     square.style.borderStyle = 'solid';
     square.style.borderWidth = '.06rem';
     square.style.backgroundColor = 'white';
+    square.style.width = '20px';
+    square.style.height = '20px';
     if (boxNum <= 23) {
         square.style.width = '20px';
         square.style.height = '20px';
@@ -80,6 +69,7 @@ function createSquare(boxNum) {
         square.style.width = '6px';
         square.style.height = '6px';
     }
+    return square;
 }
 
 function createGrid(rowNum, columnNum) {
