@@ -1,7 +1,7 @@
 const container = document.querySelector('#main-content');
 let gridContainer;
 let rowContainer;
-let boxNum = 16;
+let boxNum;
 // gridContainer.classList.add('grid__container');
 // const rowContainer = document.createElement('div');
 // rowContainer.classList.add('row__container');
@@ -27,7 +27,6 @@ function createRow(boxNum) {
     const rowContainer = document.createElement('div');
     rowContainer.classList.add('row__container');
     rowContainer.style.display = 'flex';
-    // gridContainer.appendChild(rowContainer);
     //LOOP TO ITEMNUMBER, CREATES A BOX
     for (i = 1; i <= boxNum; i++) {
         const reset = document.querySelector('.reset');
@@ -42,12 +41,13 @@ function createRow(boxNum) {
     return rowContainer;
 }
 
-function createSquare(boxNum) {
+function createSquare() {
     let square = document.createElement('div');
     square.classList.add('grid');
     square.style.borderStyle = 'solid';
     square.style.borderWidth = '.06rem';
     square.style.backgroundColor = 'white';
+    console.log(boxNum);
     if (boxNum <= 23) {
         square.style.width = '20px';
         square.style.height = '20px';
@@ -57,6 +57,9 @@ function createSquare(boxNum) {
     } else if (boxNum > 40 && boxNum <= 70) {
         square.style.width = '6px';
         square.style.height = '6px';
+    } else {
+        square.style.width = '20px';
+        square.style.height = '20px';
     }
     return square;
 }
