@@ -114,6 +114,7 @@ h1 {
     color: rgb(141, 23, 23);
     margin: 0;
     height: 5rem;
+    margin-top: 20px;
 }
 
 .footer__text {
@@ -209,10 +210,13 @@ h1 {
     #magic {
         margin-bottom: -36px;
     }
+    #button-container {
+        color: black;
+    }
 }
 
 @media screen and (max-width: 414px) {
     #etcha-sketch {
-        margin-bottom: 13.7rem;
+        margin-bottom: 11.8rem;
     }
 }
