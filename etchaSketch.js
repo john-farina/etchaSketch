@@ -1,7 +1,7 @@
 const container = document.querySelector('#main-content');
 let gridContainer;
 let rowContainer;
-let boxNum;
+let boxNum = 16;
 // gridContainer.classList.add('grid__container');
 // const rowContainer = document.createElement('div');
 // rowContainer.classList.add('row__container');
@@ -47,7 +47,6 @@ function createSquare() {
     square.style.borderStyle = 'solid';
     square.style.borderWidth = '.06rem';
     square.style.backgroundColor = 'white';
-    console.log(boxNum);
     if (boxNum <= 23) {
         square.style.width = '20px';
         square.style.height = '20px';
@@ -85,8 +84,9 @@ function removeGrid() {
 function userPrompt() {
     gridContainer = document.createElement('div');
     gridContainer.classList.add('grid__container');
-    let userChoice = prompt('1-70');
-    createGrid(userChoice, userChoice);
+    let boxNum = prompt('1-70');
+    createGrid(boxNum, boxNum);
+    return boxNum;
 }
 
 const changeGridSize = document.querySelector('.change-size');
