@@ -2,14 +2,15 @@
     font-family: 'Fortrack Regular';
     font-style: normal;
     font-weight: normal;
-    src: local('Fortrack Regular'), url('Fortrack-Regular.woff') format('woff');
+    src: local('Fortrack Regular'),
+        url('/fonts/Fortrack-Regular.woff') format('woff');
 }
 
 @font-face {
     font-family: 'rondo';
     font-style: normal;
     font-weight: normal;
-    src: local('rondo'), url('/rondo.ttf') format('truetype');
+    src: local('rondo'), url('/fonts/rondo.ttf') format('truetype');
 }
 
 body {
