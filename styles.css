@@ -53,13 +53,27 @@ h1 {
     font-size: 3rem;
 }
 
+.gradient-text {
+    background-image: linear-gradient(
+        90deg,
+        rgba(214, 162, 48, 1) 1%,
+        rgb(216, 182, 110) 100%
+    );
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation-name: shimmer;
+    animation-direction: alternate;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
 #header {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     font-family: 'Rondo', 'Times New Roman', Times, serif;
-    color: rgb(214, 162, 48);
     letter-spacing: 2px;
     gap: 0.6rem;
     margin-top: -2.5rem;
@@ -74,6 +88,7 @@ h1 {
 .subhead {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bolder;
+    color: rgb(214, 162, 48);
 }
 
 #etcha-sketch {
@@ -142,18 +157,6 @@ h1 {
     animation-duration: 1s;
 }
 
-@keyframes red-flash {
-    0% {
-        font-size: 0rem;
-    }
-    2% {
-        font-size: 0.5rem;
-    }
-    100% {
-        font-size: 3rem;
-    }
-}
-
 @keyframes SHAKE {
     0% {
         margin-left: 0%;
@@ -190,6 +193,24 @@ h1 {
     }
     100% {
         transform: rotate(-359deg);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 0% 50%;
+    }
+    25% {
+        background-position: 20% 60%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    90% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
     }
 }
 
