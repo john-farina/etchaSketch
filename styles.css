@@ -21,9 +21,6 @@ body {
     margin: 0;
 }
 
-.grid {
-}
-
 img {
     display: block;
     height: 30px;
@@ -138,8 +135,6 @@ h1 {
     color: rgb(134, 22, 22);
     font-weight: 600;
     font-size: 1.6rem;
-}
-.reset {
 }
 
 .shake {
