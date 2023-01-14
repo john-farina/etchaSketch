@@ -3,7 +3,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-<img src="../etchaSketch/img/web2logo.png" width="150">
+<img src="./img/web2logo.png" width="150">
 <h1 align="center">Etch-A-Sketch</h1>
 
   <p align="center">
