@@ -117,14 +117,14 @@ h1 {
 }
 
 #footer {
+    position: absolute;
+    bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(170, 10, 10);
     font-family: 'Rondo', 'Times New Roman', Times, serif;
-    font-weight: bolder;
-    font-size: larger;
-    color: rgb(141, 23, 23);
+    width: 100%;
+    color: rgb(173, 30, 30);
     margin: 0;
     height: 5rem;
     margin-top: 20px;
@@ -152,6 +152,19 @@ h1 {
     animation-duration: 1s;
 }
 
+.fade__transition {
+    animation: fadeTransition .6s
+}
+
+@keyframes fadeTransition {
+    0% {
+        background-color: black;
+    }
+    100% {
+        background-color: white;
+    }
+}
+
 @keyframes SHAKE {
     0% {
         margin-left: 0%;
@@ -175,10 +188,12 @@ h1 {
 
 @keyframes rotateClockwise {
     0% {
-        transform: rotate(0deg);
+        /* transform: rotate(0deg); */
+        rotate: 0deg;
     }
     100% {
-        transform: rotate(359deg);
+        /* transform: rotate(359deg); */
+        rotate: 359deg;
     }
 }
 
