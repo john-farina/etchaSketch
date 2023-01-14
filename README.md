@@ -57,18 +57,38 @@ design:
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Here's a blank template to get started: this is wherre you should be explaining what ur project does
+This project was created with the intention to recreate the feel of using a actual etcha sketch as much as i can on a website. I used Vanilla JS because there was no purpose for a library.
+
+<img src="./img/readme/EtchaDrawReset.gif" />
 
 ### Built With
  - Vanilla javaScript
  - CSS & HTML
 
+## JavaScript
+
+### **Grid Creation**
+
+<img src="./img/readme/EtchaChangeSize.gif" />
+
+### **Adding Class Names for Animations**
+
+## Design
+
+### **Title**
+
+<img src="./img/readme/title.gif" />
+
+### **Grid**
+
+### **Dials**
+
+<img src="./img/readme/button.gif" width="100" />
+
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)
+Draw with ur mouse on the grid, and reset to shake it away. No saving just like classic Etch A Sketch!
 
 
 <!-- CONTACT -->
