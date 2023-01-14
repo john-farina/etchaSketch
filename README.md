@@ -64,6 +64,9 @@ each grid is created on run and can be dynamically changed by user input. to gen
 ### **Adding Class Names for Animations**
 
 For animations i am adding and removing class names that are associated with CSS animations. After i add them i set a timeout for the specified length of that animation to then remove the class names. clearing it for the next animation.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## Design
 
 ### **Title**
@@ -87,6 +90,8 @@ The Fading animation of your drawing is made by creating a CSS animation which f
 The dials are created just by a simple circle with a solid gray border, and it rotates as you click it with transforms rotate in a CSS animation.
 
 <img src="./img/readme/button.gif" width="100" />
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- USAGE EXAMPLES -->
 ## Usage
