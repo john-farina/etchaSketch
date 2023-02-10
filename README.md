@@ -7,7 +7,7 @@
   <p align="center">
     A Web created Etcha Sketch
     <br />
-    <a href="https://linktowebsite.com">View Live Demo</a>
+    <a href="https://etchasketch.johnfarina.co">View Live Demo</a>
 </div>
 
 <!-- TABLE OF CONTENTS -->
@@ -44,26 +44,26 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This project was created with the intention to recreate the feel of using a actual etcha sketch as much as i can on a website. I used Vanilla JS because there was no purpose for a library.
+This project was created with the intention to recreate the feel of using an actual Etcha Sketch as much as I can on a website. I used Vanilla JS because there was no purpose for a library.
 
 <img src="./img/readme/EtchaDrawReset.gif" />
 
 ### Built With
- - Vanilla javaScript
+ - JavaScript
  - CSS & HTML
 
 ## JavaScript
 
 ### **Grid Creation**
 
-For the grid i am dynamically creating the amount of Boxes and Rows, for the default value of Size or users. from a range of 1-70. Each square in Rows are created by DOM and have a event listener added when returned. Which listens for mousehover, mouseon, etc. and converts the background color to black. <br />
-each grid is created on run and can be dynamically changed by user input. to generate a new one.
+For the grid I am dynamically creating the amount of Boxes and Rows, for the default value of Size or the users input from a range of 1-70. Each square in Rows are created by DOM and have its own event listener added when returned. Which listens for `mousehover`, `mouseon`, etc. and converts the background color to black. <br />
+Each grid is created on run and can be dynamically changed by user input. To generate a new one.
 
 <img src="./img/readme/EtchaChangeSize.gif" />
 
 ### **Adding Class Names for Animations**
 
-For animations i am adding and removing class names that are associated with CSS animations. After i add them i set a timeout for the specified length of that animation to then remove the class names. clearing it for the next animation.
+For animations, I am adding and removing class names that are associated with CSS animations. After I add them I set a timeout for the specified length of that animation to then remove the class names. Clearing it for the next animation.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -71,18 +71,18 @@ For animations i am adding and removing class names that are associated with CSS
 
 ### **Title**
 
-With the title i wanted to get as close as possible to the actual Etch A Sketch font, after searching i found one similar and i used:
+With the title I wanted to get as close as possible to the actual Etch A Sketch font, after searching I found one similar and I used:
 
 - **Rondo** *(for the main text)*
 - **Fortrack Regular** *(for the sub text)*
 
-Because the Etch A Sketch's title is usualy a metalic color i used a long gradient under the image which moves left to right, mimicking a shimmer of metal to the light.
+Because the Etch A Sketch's title is usually a metallic color, I used a long gradient under the image which moves left to right. Mimicking a shimmer of metal to the light.
 <img src="./img/readme/title.gif" />
 
 ### **Grid**
 
-The grid is styled by the squares inside, which is relying off of a solid border, and equal heigth and width <br/>
-The Fading animation of your drawing is made by creating a CSS animation which fades blackground color from black to white
+The grid is styled by the squares inside, which is being styled with a solid border, and equal height and width <br/>
+The Fading animation of your drawing is made by creating a CSS animation which fades background color from black to white
 
 
 ### **Dials**
@@ -96,13 +96,15 @@ The dials are created just by a simple circle with a solid gray border, and it r
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Draw with ur mouse on the grid, and reset to shake it away. No saving just like classic Etch A Sketch!
+Draw with your mouse on the grid, and reset to shake it away. No saving just like classic Etch A Sketch!
 
 
 <!-- CONTACT -->
 ## Contact
 
 **John Farina** - johnfarina8@gmail.com
+
+My Website: [johnfarina.co](https://johnfarina.co)
 
 Project Link: [github.com/john-farina/etchaSketch](https://github.com/john-farina/etchaSketch)
 
